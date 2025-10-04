@@ -1,0 +1,74 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsUpWithMess</title>
+  <link rel="stylesheet" href="{% static 'stile.css'%}">
+</head>
+<body>
+  <div>
+    <img src="{% static 'logo.png'%}" alt ="logo" height="200">
+  </div>
+  <div class="pol">
+  <div class="wrapper">
+    <header>How was the Crowd?</header>
+    
+    <div class="poll-area">
+      <form method="post" action="voting">
+        {% csrf_token %}
+      <input type="checkbox" name="opt-1" id="opt-1">
+      <input type="checkbox" name="opt-2" id="opt-2">
+      <input type="checkbox" name="opt-3" id="opt-3">
+      <input type="checkbox" name="opt-4" id="opt-4">
+      <label for="opt-1" class="opt-1">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Very Crowded</span>
+          </div>
+        </div>
+      </label>
+      <label for="opt-2" class="opt-2">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Normal</span>
+          </div>
+        </div>
+      </label>
+      <label for="opt-3" class="opt-3">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Not crowded</span>
+          </div>
+
+        </div>
+
+      </label>
+      <label for="opt-4" class="opt-4">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Empty</span>
+          </div>
+
+        </div>
+
+      
+      
+      </label>
+      <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  
+  
+  <script src="{% static 'script.js'%}"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsUpWithMess</title>
+  <link rel="stylesheet" href="{% static 'stile.css'%}">
+</head>
+<body>
+  <div>
+    <img src="{% static 'logo.png'%}" alt ="logo" height="200">
+  </div>
+  <div class="pol">
+  <div class="wrapper">
+    <header>How was the Crowd?</header>
+    
+    <div class="poll-area">
+      
+        
+
+
+      <label for="opt-1" class="opt-1">
+        <p style ="text-align:center">Very Crowded: <b>{{p1}}</b> votes</p>
+      </label>
+      <label for="opt-2" class="opt-2">
+        <p style ="text-align:center">Normal: <b>{{p2}}</b> votes</p>
+      </label>
+      <label for="opt-3" class="opt-3">
+        <p style ="text-align:center">Not Crowded: <b>{{p3}}</b> votes</p>
+
+      </label>
+      <label for="opt-4" class="opt-4">
+        <p style ="text-align:center">Empty: <b>{{p4}}</b> votes</p>
+
+      
+      
+      </label>
+      
+    </div>
+  </div>
+  </div>
+
+  
+  
+  
+</div>
+</body>
+</html>

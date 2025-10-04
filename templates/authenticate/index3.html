@@ -1,0 +1,83 @@
+<!-- your_template.html -->
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Checkbox Form</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .logo {
+            margin-top: 20px;  /* Adjust the margin as needed */
+        }
+
+        .checkbox-groups {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .checkbox-group {
+            margin-top: 20px;  /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Logo -->
+<div class="logo">
+    <img src="{% static 'logo.png' %}" alt="Logo" height="200">
+</div>
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    <!-- Checkbox Groups -->
+    <div class="checkbox-groups">
+        <!-- Checkbox Group 1 -->
+        <div class="checkbox-group">
+            <label>Option 1
+            {{ form.checkbox_group_1_option_1 }}
+            </label>
+            <br>
+            <label>Option 2
+            {{ form.checkbox_group_1_option_2 }}
+            </label>
+            <br>
+            <label>Option 3
+            {{ form.checkbox_group_1_option_3 }}
+        </label>
+            <br>
+            <label>Option 4
+            {{ form.checkbox_group_1_option_4 }}
+        </label>
+        </div>
+
+        <!-- Checkbox Group 2 -->
+        <div class="checkbox-group">
+            <label>Option 1
+            {{ form.checkbox_group_2_option_1 }}
+        </label>
+            <br>
+            <label>Option 2
+            {{ form.checkbox_group_2_option_2 }}
+        </label>
+            <br>
+            <label>Option 3
+            {{ form.checkbox_group_2_option_3 }}
+        </label>
+            <br>
+            <label>Option 4
+            {{ form.checkbox_group_2_option_4 }}
+        </label>
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
